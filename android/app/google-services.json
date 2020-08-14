@@ -1,0 +1,40 @@
+ {
+  "project_info": {
+    "project_number": "1066256683900",
+    "firebase_url": "https://iotroom-a30b0.firebaseio.com",
+    "project_id": "iotroom-a30b0",
+    "storage_bucket": "iotroom-a30b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066256683900:android:4cfee13b35d426f0a28af9",
+        "android_client_info": {
+          "package_name": "com.deni.monitoringroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066256683900-8evtaudosh5r5gn01ecsrf4voosuh0bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiVrrYkNKDH9Lv68PEtDK0RJMK8DHmdTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066256683900-8evtaudosh5r5gn01ecsrf4voosuh0bo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
