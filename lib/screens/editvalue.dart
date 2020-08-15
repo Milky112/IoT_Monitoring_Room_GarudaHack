@@ -20,6 +20,7 @@ class _EditValuePageState extends State<EditValuePage> {
   final _valueHumidityTextController = new TextEditingController();
   final _valueLDRTextcontroller = new TextEditingController();
   String Motor_condition;
+  String Lamp_Condition;
 
   StreamSubscription _subscriptionName;
 
@@ -120,10 +121,22 @@ class _EditValuePageState extends State<EditValuePage> {
         onPressed: () {
           print('Float Button is clicked');
           print(Motor_condition);
-          if (Motor_condition == 'OFF') {
+          if (Lamp_Condition == 'OFF') {
             Database.saveValueMotor(widget.mountainKey, 'ON');
+            Future.delayed(const Duration(milliseconds: 2000), () {
+              setState(() {
+                Database.saveValueMotor(widget.mountainKey, '0');
+              });
+            });
           } else {
-            Database.saveValueMotor(widget.mountainKey, 'OFF');
+            if (Lamp_Condition == 'ON') {
+              Database.saveValueMotor(widget.mountainKey, 'OFF');
+              Future.delayed(const Duration(milliseconds: 2000), () {
+                setState(() {
+                  Database.saveValueMotor(widget.mountainKey, '0');
+                });
+              });
+            }
           }
         },
       ),
@@ -153,6 +166,7 @@ class _EditValuePageState extends State<EditValuePage> {
     _valueLDRTextcontroller.value = _valueLDRTextcontroller.value.copyWith(
       text: val,
     );
+    Lamp_Condition = val;
   }
 
   void _updateMotorCondition(String val) {
